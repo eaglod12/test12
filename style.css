@@ -1,0 +1,25 @@
+.navigation {
+    background-color: rgb(242, 233, 240);
+}
+
+.icone-nav {
+    padding-top: 1rem;
+    padding-right: 2.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+}
+
+.footer {
+    background-color: rgb(242, 233, 240);
+
+}
