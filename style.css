@@ -1,3 +1,5 @@
+
+
 .navigation {
     background-color: rgb(242, 233, 240);
 }
@@ -5,6 +7,10 @@
 .icone-nav {
     padding-top: 1rem;
     padding-right: 2.5rem;
+}
+
+.produit {
+    text-align: center;
 }
 
 h1 {
@@ -17,9 +23,4 @@ ul {
     justify-content: space-between;
 
     list-style: none;
-}
-
-.footer {
-    background-color: rgb(242, 233, 240);
-
 }
