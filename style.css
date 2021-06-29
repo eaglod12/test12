@@ -1,7 +1,9 @@
-
+body {
+    background-color: burlywood;
+}
 
 .navigation {
-    background-color: rgb(242, 233, 240);
+    background-color: rgb(253, 242, 208);
 }
 
 .icone-nav {
@@ -21,6 +23,18 @@ h1 {
 ul {
     display: flex;
     justify-content: space-between;
-
     list-style: none;
 }
+
+.encart-art {
+    text-align: center;
+    border: 0.6rem rgb(253, 242, 208) solid;
+    border-radius: 0.5rem;
+}
+
+.teddy-img {
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+}
+
+
