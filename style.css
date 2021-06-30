@@ -1,5 +1,6 @@
 body {
     background-color: burlywood;
+    font-size: 1.2rem;
 }
 
 .navigation {
@@ -9,6 +10,7 @@ body {
 .icone-nav {
     padding-top: 1rem;
     padding-right: 2.5rem;
+    list-style: none;
 }
 
 .produit {
@@ -28,13 +30,54 @@ ul {
 
 .encart-art {
     text-align: center;
-    border: 0.6rem rgb(253, 242, 208) solid;
+    border: 0.4rem rgb(253, 242, 208) solid;
     border-radius: 0.5rem;
 }
 
 .teddy-img {
     border-radius: 1.5rem;
     margin-top: 2rem;
+    max-width: 40rem;
 }
 
+.name {
+    padding-top: 1rem;
+}
+
+.description {
+    padding-top: 1rem;
+}
+
+.price {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer {
+    background-color: rgb(253, 242, 208);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding-top: 1.6rem;
+    color: black;
+    font-family: cursive;
+}
+
+/*------------mentions-légales------------*/
+
+.h1-mention {
+    padding-top: 2rem;
+}
+
+.mention {
+    padding-top: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
 

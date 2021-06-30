@@ -1,8 +1,10 @@
+//Page d'acceuil avec les articles
+
 main()
 
 async function main() {
     const articles = await getArticles();
-    console.log(articles); // Affichage de array
+    console.log(articles); // Affichage de array pour vérifier si fetch répond
     for (article of articles) {
         displayArticle(article);
     }
@@ -22,11 +24,13 @@ function getArticles() {
         })
 }
 
+//function pour récuperer et afficher les articles sur la page d'acceuil
+
 function displayArticle(article) {
     const templateElt = document.getElementById("produit");
     let vueArticle = `        
     <figure id="encart-art" class= "encart-art">
-        <img class="teddy-img" src="`+article.imageUrl+`" alt="`+article.name+` "width="500" height="400">
+        <img class="teddy-img" src="`+article.imageUrl+` "width="" height="">
         <figcaption class="name">`+article.name+`</figcaption>
         <figcaption class="description">`+article.description+`</figcaption>
         <figcaption class="price">`+article.price+`</figcaption>
