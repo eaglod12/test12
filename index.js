@@ -28,12 +28,13 @@ function getArticles() {
 
 function displayArticle(article) {
     const templateElt = document.getElementById("produit");
-    let vueArticle = `        
+    let vueArticle = `       
     <figure id="encart-art" class= "encart-art">
-        <img class="teddy-img" src="`+article.imageUrl+` "width="" height="">
-        <figcaption class="name">`+article.name+`</figcaption>
-        <figcaption class="description">`+article.description+`</figcaption>
-        <figcaption class="price">`+article.price+`</figcaption>
+        <a href="produit.html" id="link-produit" class="link-produit"/>
+        <img class="teddy-img" src="`+ article.imageUrl + ` "width="" height="">
+        <figcaption class="name">`+ article.name + `</figcaption>
+        <figcaption class="description">`+ article.description + `</figcaption>
+        <figcaption class="price">`+ article.price + `</figcaption>
     </figure>`
     console.log(article['imageUrl']); //pour la visualisation des Url
     templateElt.insertAdjacentHTML('afterend', vueArticle);

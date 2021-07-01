@@ -64,6 +64,9 @@ a {
     font-size: 1.4rem;
     padding-top: 1.6rem;
     color: black;
+}
+
+.icone-footer {
     font-family: cursive;
 }
 
@@ -80,4 +83,3 @@ a {
     font-size: 1.3rem;
     text-align: justify;
 }
-
