@@ -6,17 +6,18 @@ async function main() {
     displayArticle(articleData);
 }
 
+
 function getArticleId() {
     return new URL(Location.href).searchParams.get('id')
 }
 
 function getArticleData(articleId) {
     return fetch(`http://localhost:3000/api/teddies/${articleId}`)
-        .then(function (res) {
+        .then(async function (res) {
             return res.json()
         })
         .then(function (article) {
-            return articles
+            return article
         })
         .catch(function (error) {
             alert(error)
@@ -26,6 +27,7 @@ function getArticleData(articleId) {
 function displayArticle(articleData) {
     document.getElementById()
 }
+
 
 
 

@@ -29,19 +29,31 @@ ul {
 }
 
 .encart-art {
-    text-align: center;
+    display: flex;
     border: 0.4rem rgb(253, 242, 208) solid;
     border-radius: 0.5rem;
 }
 
+.link-produit {
+    display: flex;
+}
+
 .teddy-img {
+    margin-left: 2rem;
     border-radius: 1.5rem;
-    margin-top: 2rem;
-    max-width: 40rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+}
+
+.info {
+    padding-top: 1rem;
+    margin-left: 2rem;
 }
 
 .name {
-    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
 }
 
 .description {
@@ -50,7 +62,6 @@ ul {
 
 .price {
     padding-top: 1rem;
-    padding-bottom: 1rem;
 }
 
 .footer {
