@@ -35,12 +35,13 @@ function displayArticle(article) {
     <div class="info" id="info">        
         <figcaption class="name">`+ article.name + `</figcaption>
         <figcaption class="description">`+ article.description + `</figcaption>
-        <figcaption class="price" id="price">`+ article.price + `</figcaption>
+        <figcaption class="price" id="price">` + article.price/100 + '€' + `</figcaption>
     </div>
     </figure>`
     console.log(article['imageUrl']); //pour la visualisation des Url dans la console
     element.insertAdjacentHTML('afterend', vueArticle);
 }
+
 
 
 
