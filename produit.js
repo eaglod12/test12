@@ -1,32 +1,28 @@
 main()
 
 async function main() {
-    const articleId = getArticleId()
-    const articleData = await getArticleData(articleId)
-    displayArticle(articleData);
+    const produitId = getProduitId()
+    const produitData = await getProduitData(produitId)
+    displayproduit(produitData);
 }
 
 
-function getArticleId() {
-    return new URL(Location.href).searchParams.get('id')
-}
 
-function getArticleData(articleId) {
-    return fetch(`http://localhost:3000/api/teddies/${articleId}`)
+function getProduitData(produitId) {
+    return fetch(`http://localhost:3000/api/teddies/${produitId}`)
         .then(async function (res) {
             return res.json()
         })
-        .then(function (article) {
-            return article
+        .then(function (produit) {
+            return produit
         })
         .catch(function (error) {
             alert(error)
         })
 }
 
-function displayArticle(articleData) {
-    document.getElementById()
-}
+
+
 
 
 

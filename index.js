@@ -30,7 +30,7 @@ function displayArticle(article) {
     const element = document.getElementById("produit");
     let vueArticle = `       
     <figure id="encart-art" class= "encart-art">
-        <a href="produit.html?`+ article._id +`" id="link-produit" class="link-produit"/>    
+        <a href="produit.html?=`+ article._id + `" id="link-produit" class="link-produit"/>    
         <img class="teddy-img" src="`+ article.imageUrl + ` "width=""height="">
     <div class="info" id="info">        
         <figcaption class="name">`+ article.name + `</figcaption>
@@ -41,11 +41,7 @@ function displayArticle(article) {
     console.log(article['imageUrl']); //pour la visualisation des Url dans la console
     element.insertAdjacentHTML('afterend', vueArticle);
 }
-    /*insertAdjacentHTML() analyse le texte spécifié en tant que HTML ou XML et
-    insère les noeuds résultants dans le DOM à la position spécifiée.
-    L'élement qui est utilisé n'est pas  réanalysé et les élements qu'il contient
-    ne sont donc pas corrompus. Ceci, et le fait d'éviter la sérialisation
-    supplémentaire, rend la fonction plus rapide et directe que innerHTML.*/
+
 
 
 
