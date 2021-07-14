@@ -25,31 +25,33 @@ function displayArticle(article) {
     const element = document.getElementById("article");
 
     let vueArticle = `       
-   <figure id="encart-art" class= "encart-art">
-       <a href="produit.html?id=`+ article._id + `" id="link-produit" class="link-produit"/>    
-       <img class="teddy-img" src="`+ article.imageUrl + ` "width=""height="">
-   <div class="info" id="info">        
-       <figcaption class="name">`+ article.name + `</figcaption>
-       <figcaption class="description">`+ article.description + `</figcaption>
-       <figcaption class="price" id="price">` + article.price / 100 + ",00 €" + `</figcaption>
-   </div>
-   </figure>`
+    <figure id="encart-art" class= "encart-art">
+        <a href="panier.html?id=`+ article._id + `" id="link-produit" class="link-produit"/>    
+        <img class="teddy-img" src="`+ article.imageUrl + ` "width=""height="">
+    <div class="info" id="info">        
+        <figcaption class="name">`+ article.name + `</figcaption>
+        <figcaption class="description">`+ article.description + `</figcaption>
+        <figcaption class="price" id="price">` + article.price / 100 + ",00 €" + `</figcaption>
+        <button id="btn-art" class="btn-art">Ajouter au panier</button>
+    </div>
+    </figure>`
+
     element.insertAdjacentHTML('afterend', vueArticle);
 }
 
 function $_GET(param) {
-    var vars = {};
+    let lets = {};
     window.location.href.replace(location.hash, '').replace(
         /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
         function (m, key, value) { // callback
-            vars[key] = value !== undefined ? value : '';
+            lets[key] = value !== undefined ? value : '';
         }
     );
 
     if (param) {
-        return vars[param] ? vars[param] : null;
+        return lets[param] ? lets[param] : null;
     }
-    return vars;
+    return lets;
 }
 
 
