@@ -94,3 +94,25 @@ a {
     font-size: 1.3rem;
     text-align: justify;
 }
+
+/*------------------produit--------------------*/
+
+.btn-card {
+    margin-top: 1.5rem;
+    border: 0.4rem rgb(253, 242, 208) solid;
+    border-radius: 0.8rem;
+}
+
+
+
+
+/*--------------------panier-------------------*/
+
+/*bouton du panier*/
+.dropdown:hover > #cart-dropdown{
+    display: block;
+}
+
+
+
+

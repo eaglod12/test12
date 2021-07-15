@@ -32,8 +32,9 @@ function displayArticle(article) {
         <figcaption class="name">`+ article.name + `</figcaption>
         <figcaption class="description">`+ article.description + `</figcaption>
         <figcaption class="price" id="price">` + article.price / 100 + ",00 €" + `</figcaption>
-        <button id="btn-art" class="btn-art">Ajouter au panier</button>
+        <button type="button" class="btn-card" class="add-to-cart">Ajouter au panier</button>
     </div>
+
     </figure>`
 
     element.insertAdjacentHTML('afterend', vueArticle);
