@@ -41,7 +41,7 @@ ul {
 .teddy-img {
     margin-left: 2rem;
     border-radius: 1.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     max-width: 30rem;
 }
@@ -99,8 +99,8 @@ a {
 
 .btn-card {
     margin-top: 1.5rem;
-    border: 0.4rem rgb(253, 242, 208) solid;
-    border-radius: 0.8rem;
+    border: 0.3rem rgb(253, 242, 208) solid;
+    border-radius: 0.7rem;
 }
 
 

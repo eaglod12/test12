@@ -24,15 +24,30 @@ function getArticleId() {
 function displayArticle(article) {
     const element = document.getElementById("article");
 
-    let vueArticle = `       
+    let vueArticle = `  
+
     <figure id="encart-art" class= "encart-art">
-        <a href="panier.html?id=`+ article._id + `" id="link-produit" class="link-produit"/>    
         <img class="teddy-img" src="`+ article.imageUrl + ` "width=""height="">
     <div class="info" id="info">        
         <figcaption class="name">`+ article.name + `</figcaption>
         <figcaption class="description">`+ article.description + `</figcaption>
         <figcaption class="price" id="price">` + article.price / 100 + ",00 €" + `</figcaption>
-        <button type="button" class="btn-card" class="add-to-cart">Ajouter au panier</button>
+        <button type="button" onclick="window.location.href = 'panier.html?id=`+ article._id + `'" class="btn-card" class="add-to-cart">Ajouter au panier</button>
+
+        <!---------------les articles----------------->
+
+        <label for="q">Quantité: </label>
+        <select id="qt" name="q">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
     </div>
 
     </figure>`
