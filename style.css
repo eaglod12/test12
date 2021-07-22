@@ -47,8 +47,11 @@ ul {
 }
 
 .info {
-    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
     margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .name {
@@ -98,20 +101,25 @@ a {
 /*------------------produit--------------------*/
 
 .btn-card {
-    margin-top: 1.5rem;
-    border: 0.3rem rgb(253, 242, 208) solid;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: 0.2rem rgb(199, 131, 92) solid;
     border-radius: 0.7rem;
+    max-width: 8rem;
 }
 
+.quantite {
+   padding-top: 1rem;
+}
 
-
+.quantite-produit {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 
 /*--------------------panier-------------------*/
 
-/*bouton du panier*/
-.dropdown:hover > #cart-dropdown{
-    display: block;
-}
+
 
 
 

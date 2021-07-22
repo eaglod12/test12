@@ -28,32 +28,21 @@ function displayArticle(article) {
 
     <figure id="encart-art" class= "encart-art">
         <img class="teddy-img" src="`+ article.imageUrl + ` "width=""height="">
-    <div class="info" id="info">        
+
+    <div class="info" id="info">     
         <figcaption class="name">`+ article.name + `</figcaption>
         <figcaption class="description">`+ article.description + `</figcaption>
         <figcaption class="price" id="price">` + article.price / 100 + ",00 €" + `</figcaption>
-        <button type="button" onclick="window.location.href = 'panier.html?id=`+ article._id + `'" class="btn-card" class="add-to-cart">Ajouter au panier</button>
-
-        <!---------------les articles----------------->
-
-        <label for="q">Quantité: </label>
-        <select id="qt" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-        </select>
+        <label class="quantite-produit">Quantité</label><input type = "number" id = "qte" style= "width: 3.8rem" class="input-sm form-control"></input>
+        <button class="btn-card" class="btn btn-primary" type="submit" onclick="ajouter()"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
     </div>
 
     </figure>`
 
     element.insertAdjacentHTML('afterend', vueArticle);
 }
+
+/*-----function pour récupérer les paramétres GET d'une URL------*/
 
 function $_GET(param) {
     let lets = {};
@@ -69,6 +58,9 @@ function $_GET(param) {
     }
     return lets;
 }
+
+
+
 
 
 
