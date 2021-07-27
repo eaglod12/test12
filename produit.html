@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page produit de Orinoco</title>
     <link rel="stylesheet" href="style.css">
-
-
-
 </head>
 
 <body>
@@ -21,7 +18,7 @@
                 </li>
                 <li class="icone-nav">
                     <a href="panier.html"><img src="https://img.icons8.com/office/40/000000/add-shopping-cart.png"
-                            alt="icone panier" title="Panier" /></a>
+                            alt="icone panier" title="Panier" /></a><label id="nb-article"></label>
                 </li>
             </ul>
         </nav>
@@ -32,6 +29,26 @@
             <h2 id="title-art"></h2>
 
         </article>
+
+
+                <article class="well form-inline pull-left col-lg-5">
+                    <legend>Contenu du panier</legend>
+                    <table id="tableau" class="table">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Qte</th>
+                                <th>Prix unitaire</th>
+                                <th>Prix de la ligne</th>
+                                <th>Supprimer</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <br><label>Prix du panier total</label> : <label id="priceTotal"></label>
+                    <label id="nbreLignes" hidden>0</label>
+                </article>
+
+
     </main>
     <footer class="footer">
         <p class="icone-footer">
@@ -42,6 +59,7 @@
         <a href="mentions-legales.html" class="icone-footer">Mentions légales</a>
     </footer>
     <script src="produit.js"></script>
+    <script src="panier.js"></script>
 </body>
 
 </html>
