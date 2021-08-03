@@ -11,6 +11,11 @@ function Panier() {
         let total = 0;
         for (let i = 0; i < this.liste.length; i++)
             total += this.liste[i].getpriceLigne();
+            if (isNaN(total)) {
+                return 0;
+              }
+            
+                
         return total;
     }
     this.getArticle = function (produit) {

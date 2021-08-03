@@ -141,6 +141,13 @@ function supprimer(produit) {
         let colonne5 = ligneTableau.insertCell(4);
         colonne5.innerHTML += "<button class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
     }
+    
+    if (isNaN(monPanier.getpricePanier())) {
+        monPanier.getpricePanier() = 0;
+      }
+
+    console.log(monPanier.getpricePanier());
+
     document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();
     document.getElementById("nbreLignes").innerHTML = longueur;
 
@@ -153,8 +160,8 @@ function supprimer(produit) {
 
 //variable avec la clé pour le local storage
 //convertion des données json en javascipt
-let produitAjouterDansLeLocalStorage = JSON.parse(localStorage.getItem("produit"));
-
+let produitAjouterDansLocalStorage = JSON.parse(localStorage.getItem("produit"));
+console.log(produitAjouterDansLocalStorage);
 
 //Récapitulatif du panier
 
@@ -169,17 +176,17 @@ const votrePanier = () => {
 //Ajouter un article au local storage
 
 const ajouterProduitLocalStorage = () => {
-    produitAjouterDansLeLocalStorage.push(produit); //Ajout detail de article
-    localStorage.setItem("produit", JSON.stringify(produitAjouterDansLeLocalStorage)); //transformation en json et envoie au local storage
+    produitAjouterDansLocalStorage.push(produit); //Ajout detail de article
+    localStorage.setItem("produit", JSON.stringify(produitAjouterDansLocalStorage)); //transformation en json et envoie au local storage
 };
 
-if (produitAjouterDansLeLocalStorage) {
+if (produitAjouterDansLocalStorage) {
     ajouterProduitLocalStorage();
     votrePanier();
 }
 
 else {
-    produitAjouterDansLeLocalStorage = [];
+    produitAjouterDansLocalStorage = [];
     ajouterProduitLocalStorage();
     votrePanier();
 }
