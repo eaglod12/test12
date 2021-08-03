@@ -139,7 +139,12 @@ th {
 
 /*--------------------panier-------------------*/
 
-
+.btn-retirer {
+    cursor: pointer;
+    border: 0.2rem rgb(199, 131, 92) solid;
+    border-radius: 0.7rem;
+    max-width: 8rem;
+}
 
 
 

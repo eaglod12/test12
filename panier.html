@@ -27,37 +27,35 @@
         <h1>Panier</h1>
 
         <section class="container-panier">
-            <article class="well form-inline pull-left col-lg-5">
+            <article class="article-produit">
                 <legend>Gestion du panier</legend>
-                <label class="col-lg-3">Produit</label> : <input type="number" id="" style="width:120px"
+                <label class="label-panier">Produit</label> : <input type="number" id="" style="width:120px"
                     class="input-sm form-control"></input><br><br>
-                <label class="col-lg-3">Quantité</label> : <input type="number" id="quantite" style="width:120px"
+                <label class="label-panier">Quantité</label> : <input type="number" id="quantite" style="width:120px"
                     class="input-sm form-control"></input><br><br>
-                <label class="col-lg-3">Prix</label> : <input type="number" id="price" style="width:120px"
+                <label class="label-panier">Prix</label> : <input type="number" id="price" style="width:120px"
                     class="input-sm form-control"></input><br><br>
                 <button class="btn btn-primary" type="submit" onclick="ajouter()"><span
                         class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
             </article>
         </section>
 
-        <section class="container-panier">
-            <article class="contenu-panier">
-                <legend>Contenu du panier</legend>
-                <table id="tableau" class="table">
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>quantite</th>
-                            <th>Prix unitaire</th>
-                            <th>Prix de la ligne</th>
-                            <th>Supprimer</th>
-                        </tr>
-                    </thead>
-                </table>
-                <br><label>Prix du panier total</label> : <label id="prixTotal"></label>
-                <label id="nbreLignes" hidden>0</label>
-            </article>
-        </section>
+        <article class="article-produit">
+            <legend>Contenu du panier</legend>
+            <table id="tableau" class="tableau">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Qte</th>
+                        <th>Prix unitaire</th>
+                        <th>Prix de la ligne</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+            </table>
+            <br><label">Prix du panier total</label> <label id="priceTotal"></label>
+            <label id="nbreLignes" hidden>0</label>
+        </article>
 
     </main>
     <script src="panier.js"></script>

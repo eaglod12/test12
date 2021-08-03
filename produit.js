@@ -104,7 +104,7 @@ function ajouter() {
         let colonne4 = ligneTableau.insertCell(3);
         colonne4.innerHTML += ligne.getpriceLigne();
         let colonne5 = ligneTableau.insertCell(4);
-        colonne5.innerHTML += "<button class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
+        colonne5.innerHTML += "<button class=\"btn-retirer\" class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
     }console.log(document.getElementById("priceTotal"));
     document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();
     document.getElementById("nbreLignes").innerHTML = longueur;
