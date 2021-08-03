@@ -149,6 +149,45 @@ function supprimer(produit) {
 }
 
 
+/*---------------------------Local-storage---------------------------*/
+
+//variable avec la clé pour le local storage
+//convertion des données json en javascipt
+let produitAjouterDansLeLocalStorage = JSON.parse(localStorage.getItem("produit"));
+
+
+//Récapitulatif du panier
+
+const votrePanier = () => {
+    if(window.confirm("Produit ajoutée a votre panier.")){
+        window.location.href = "panier.html";
+    } else{
+        window.location.href = "index.html";
+    }
+}
+
+//Ajouter un article au local storage
+
+const ajouterProduitLocalStorage = () => {
+    produitAjouterDansLeLocalStorage.push(produit); //Ajout detail de article
+    localStorage.setItem("produit", JSON.stringify(produitAjouterDansLeLocalStorage)); //transformation en json et envoie au local storage
+};
+
+if (produitAjouterDansLeLocalStorage) {
+    ajouterProduitLocalStorage();
+    votrePanier();
+}
+
+else {
+    produitAjouterDansLeLocalStorage = [];
+    ajouterProduitLocalStorage();
+    votrePanier();
+}
+
+
+
+
+
 
 
 
