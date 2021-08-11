@@ -1,3 +1,4 @@
+
 main()
 
 async function main() {
@@ -84,8 +85,8 @@ function ajouter() {
         for (let i = longueurTab; i > 0; i--) {
             monPanier.ajouterArticle(articleId, price, quantite);
             tableau.deleteRow(i);
-        }
-    }*/
+        }*/
+
 
     /*-----------------création du tableau-----------------------*/
 
@@ -110,7 +111,13 @@ function ajouter() {
     document.getElementById("nbreLignes").innerHTML = longueur;
     console.log(document.getElementById("nb-article"));
     document.getElementById("nb-article").innerHTML = quantite;
+    localStorage.setItem("monpanier", JSON.stringify(monPanier));
+    console.log(localStorage.getItem('monpanier'));
+    /*let produitEnregistreDansLocalStorage = JSON.parse(localStorage.getItem("teddy"));
+    produitEnregistreDansLocalStorage.push(monPanier);*/
 }
+
+
 
     /*----------function pour suprimer les lignes du tableau de commande---------*/
 
@@ -156,40 +163,8 @@ function supprimer(produit) {
 }
 
 
-/*---------------------------Local-storage---------------------------*/
 
-//variable avec la clé pour le local storage
-//convertion des données json en javascipt
-let produitAjouterDansLocalStorage = JSON.parse(localStorage.getItem("produit"));
-console.log(produitAjouterDansLocalStorage);
 
-//Récapitulatif du panier
-
-const votrePanier = () => {
-    if(window.confirm("Produit ajoutée a votre panier.")){
-        window.location.href = "panier.html";
-    } else{
-        window.location.href = "index.html";
-    }
-}
-
-//Ajouter un article au local storage
-
-const ajouterProduitLocalStorage = () => {
-    produitAjouterDansLocalStorage.push(produit); //Ajout detail de article
-    localStorage.setItem("produit", JSON.stringify(produitAjouterDansLocalStorage)); //transformation en json et envoie au local storage
-};
-
-if (produitAjouterDansLocalStorage) {
-    ajouterProduitLocalStorage();
-    votrePanier();
-}
-
-else {
-    produitAjouterDansLocalStorage = [];
-    ajouterProduitLocalStorage();
-    votrePanier();
-}
 
 
 

@@ -26,20 +26,6 @@
     <main>
         <h1>Panier</h1>
 
-        <section class="container-panier">
-            <article class="article-produit">
-                <legend>Gestion du panier</legend>
-                <label class="label-panier">Produit</label> : <input type="number" id="" style="width:120px"
-                    class="input-sm form-control"></input><br><br>
-                <label class="label-panier">Quantité</label> : <input type="number" id="quantite" style="width:120px"
-                    class="input-sm form-control"></input><br><br>
-                <label class="label-panier">Prix</label> : <input type="number" id="price" style="width:120px"
-                    class="input-sm form-control"></input><br><br>
-                <button class="btn btn-primary" type="submit" onclick="ajouter()"><span
-                        class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
-            </article>
-        </section>
-
         <article class="article-produit">
             <legend>Contenu du panier</legend>
             <table id="tableau" class="tableau">
@@ -52,6 +38,9 @@
                         <th>Supprimer</th>
                     </tr>
                 </thead>
+                <tbody id="panier" class="panier">
+
+                </tbody>
             </table>
             <br><label">Prix du panier total</label> <label id="priceTotal"></label>
             <label id="nbreLignes" hidden>0</label>

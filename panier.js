@@ -45,6 +45,12 @@ function LignePanier(produit, quantite, price) {
     }
 }
 
+let panier = JSON.parse(localStorage.getItem('monpanier'));
+
+console.log(panier['liste']);
+
+
+/*------------------injection du html-----------------*/
 
 
 
