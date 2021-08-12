@@ -81,11 +81,6 @@ function ajouter() {
     monPanier.ajouterArticle(produit, quantite, price);
     let tableau = document.getElementById("tableau");
     let longueurTab = parseInt(document.getElementById("quantite").value);
-    /*if (longueurTab > 0) {
-        for (let i = longueurTab; i > 0; i--) {
-            monPanier.ajouterArticle(articleId, price, quantite);
-            tableau.deleteRow(i);
-        }*/
 
 
     /*-----------------création du tableau-----------------------*/

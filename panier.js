@@ -45,6 +45,9 @@ function LignePanier(produit, quantite, price) {
     }
 }
 
+/*----------------local storage-----------------*/
+
+
 let panier = JSON.parse(localStorage.getItem('monpanier'));
 
 console.log(panier['liste']);
@@ -52,7 +55,23 @@ console.log(panier['liste']);
 
 /*------------------injection du html-----------------*/
 
+function displayPanier(monPanier) {
+    const element = document.getElementById("panier");
 
+    let vueArticle = `
+     
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+`  
+//element.insertAdjacentHTML('afterend', vueArticle);
+
+}
 
 
 
