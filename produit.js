@@ -113,7 +113,7 @@ function ajouter() {
     document.getElementById("nbreLignes").innerHTML = longueur;
     console.log(document.getElementById("nb-article"));
     document.getElementById("nb-article").innerHTML = quantite;
-    
+
     localStorage.setItem("monpanier", JSON.stringify(monPanier));
     console.log(localStorage.getItem('monpanier'));
     /*let produitEnregistreDansLocalStorage = JSON.parse(localStorage.getItem("teddy"));
@@ -158,6 +158,8 @@ function supprimer(produit) {
         colonne5.innerHTML += "<button class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
     }
     
+
+    //erreur NaN----------------------------
     if (isNaN(monPanier.getpricePanier())) {
         monPanier.getpricePanier() = 0;
       }

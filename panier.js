@@ -1,4 +1,4 @@
-
+//const e = require("express");
 
 function Panier() {
     this.liste = [];
@@ -11,11 +11,11 @@ function Panier() {
         let total = 0;
         for (let i = 0; i < this.liste.length; i++)
             total += this.liste[i].getpriceLigne();
-            if (isNaN(total)) {
-                return 0;
-              }
-            
-                
+        if (isNaN(total)) {
+            return 0;
+        }
+
+
         return total;
     }
     this.getArticle = function (produit) {
@@ -68,8 +68,8 @@ function displayPanier(monPanier) {
         <td></td>
     </tr>
 
-`  
-//element.insertAdjacentHTML('afterend', vueArticle);
+`
+    //element.insertAdjacentHTML('afterend', vueArticle);
 
 }
 
@@ -90,7 +90,7 @@ let regexGlobal = /^[a-zA-Z]+$/u;
 let regexAdresse = /^[0-9]{1,5}( [-a-zA-Zàâäéèêëïîôöùûüç ]+)+$/;
 let regexMail = new RegExp(
     "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$",
-	"g"
+    "g"
 );
 
 // événement d’écoute sur le changement
@@ -104,6 +104,50 @@ orderForm.last_name.addEventListener("change", e =>
         "erreur,il ne doit pas avoir de numéro dans votre nom"
     )
 );
+
+orderForm.first_name.addEventListener("change", e =>
+    testField(
+        regexGlobal,
+        e.target.value,
+        firstName,
+        "lastName",
+        "erreur,il ne doit pas avoir de numéro dans votre nom"
+    )
+);
+
+orderForm.mail.addEventListener("change", e =>
+    testField(
+        regexMail,
+        e.target.value,
+        mail,
+        "mail",
+        "Désolé, votre adresse courriel n’est pas correcte, elle devrait contenir @"
+    )
+);
+
+orderForm.ville.addEventListener("change", e =>
+    testField(
+        regexGlobal,
+        e.target.value,
+        ville,
+        "ville",
+        "Désolé, vous ne devriez pas avoir de numéro dans votre nom de ville"
+    )
+);
+
+orderForm.adresse.addEventListener("adresse", e =>
+    testField(
+        regexAdresse,
+        e.target.value,
+        adresse,
+        "adresse",
+        "Désolé, mauvaise saisie de votre adresse, vous devez suivre l’exemple"
+    )
+);
+
+//création de variables pour tester les valeurs des entrées
+
+
 
 
 
