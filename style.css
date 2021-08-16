@@ -153,13 +153,16 @@ th {
     text-align: center;
 }
 
-.form-group {
-    margin-left: 2rem;
-    margin-top: 2rem;
+.form-titre {
+    padding-top: 2rem;
 }
 
-.form-titre {
-    margin-top: 4rem;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 1.5rem;
 }
 
 #btn-submit {

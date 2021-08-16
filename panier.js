@@ -74,7 +74,6 @@ function displayPanier(monPanier) {
 }
 
 
-
 /*------------------formulaire d'envoie--------------------*/
 
 
