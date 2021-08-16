@@ -47,39 +47,47 @@
                 <label id="nbreLignes" hidden>0</label>
         </article>
 
+
         <!-----------------formulaire----------------->
-        <!-- "^\D*$" -->
 
-        <form method="post" id="orderForm">
-            <div class="form-group">
-                <label class="prenom">Prénom</label>
-                <input type="text" class="form-control" id="last_name" placeholder="Last Name" name="lastName" required>
-            </div>
+        <div class="container-form" id="showform">
 
-            <div class="form-group">
-                <label class="nom">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Name" name="Name" required>
-            </div>
+            <form method="post" id="orderForm">
 
-            <div class="form-group">
-                <label class="mail">Mail</label>
-                <input type="email" class="form-control" id="mail" name="mail" placeholder="abc@exemple.com" required>
-            </div>
+                <h2 class="form-titre">Formulaire de validation</h2>
 
-            <div class="form-group">
-                <label class="ville">Ville</label>
-                <input type="text" class="form-control" id="ville" name="ville" placeholder="Paris, Sydney, etc..."
-                    pattern="^\D*$" required>
-            </div>
+                <div class="form-group">
+                    <label class="prenom">Prénom</label>
+                    <input type="text" class="form-control" id="last_name" placeholder="Last Name" name="lastName"
+                        required>
+                </div>
 
-            <div class="form-group">
-                <label for="adresse">Adresse</label>
-                <input type="text" class="form-control" id="adresse" name="adresse" placeholder="18 rue du pré"
-                    required>
-            </div>
+                <div class="form-group">
+                    <label class="nom">Nom</label>
+                    <input type="text" class="form-control" id="first_name" placeholder="firstName" name="Name" required>
+                </div>
 
-            <button type="submit" id="btn-submit" class="btn btn-primary">Valider</button>
-        </form>
+                <div class="form-group">
+                    <label class="mail">Mail</label>
+                    <input type="email" class="form-control" id="mail" name="mail" placeholder="abc@exemple.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="ville">Ville</label>
+                    <input type="text" class="form-control" id="ville" name="ville" placeholder="Paris, Sydney, etc..."
+                        pattern="^\D*$" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse" name="adresse" placeholder="18 rue du pré"
+                        required>
+                </div>
+
+                <button type="submit" id="btn-submit" class="btn btn-primary">Valider</button>
+            </form>
+        </div>
 
     </main>
     <script src="panier.js"></script>

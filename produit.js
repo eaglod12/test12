@@ -113,6 +113,7 @@ function ajouter() {
     document.getElementById("nbreLignes").innerHTML = longueur;
     console.log(document.getElementById("nb-article"));
     document.getElementById("nb-article").innerHTML = quantite;
+    
     localStorage.setItem("monpanier", JSON.stringify(monPanier));
     console.log(localStorage.getItem('monpanier'));
     /*let produitEnregistreDansLocalStorage = JSON.parse(localStorage.getItem("teddy"));
@@ -153,7 +154,7 @@ function supprimer(produit) {
 
         colonne4.innerHTML += ligne.getpriceLigne();
         let colonne5 = ligneTableau.insertCell(4);
-        
+
         colonne5.innerHTML += "<button class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
     }
     

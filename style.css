@@ -147,6 +147,26 @@ th {
 }
 
 
+/*--------------------formulaire---------------------*/
+
+.container-form {
+    text-align: center;
+}
+
+.form-group {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.form-titre {
+    margin-top: 4rem;
+}
+
+#btn-submit {
+    margin-top: 2rem;
+
+}
+
 
 
 

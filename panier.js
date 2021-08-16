@@ -79,7 +79,7 @@ function displayPanier(monPanier) {
 
 
 const lastName = document.getElementById("last_name");
-const firstName = document.getElementById("name");
+const firstName = document.getElementById("first_name");
 const mail = document.getElementById("mail");
 const ville = document.getElementById("ville");
 const adresse = document.getElementById("adresse");
