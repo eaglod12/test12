@@ -90,18 +90,25 @@ function ajouter() {
     for (let i = 0; i < longueur; i++) {
         let ligne = monPanier.liste[i];
         console.log(tableau);
+
         let ligneTableau = tableau.insertRow(-1);
         let colonne1 = ligneTableau.insertCell(0);
+
         colonne1.innerHTML += ligne.getproduit();
         let colonne2 = ligneTableau.insertCell(1);
+
         colonne2.innerHTML += ligne.quantiteArticle;
         let colonne3 = ligneTableau.insertCell(2);
+
         colonne3.innerHTML += ligne.priceArticle;
         let colonne4 = ligneTableau.insertCell(3);
+
         colonne4.innerHTML += ligne.getpriceLigne();
         let colonne5 = ligneTableau.insertCell(4);
+
         colonne5.innerHTML += "<button class=\"btn-retirer\" class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
-    }console.log(document.getElementById("priceTotal"));
+    }   console.log(document.getElementById("priceTotal"));
+
     document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();
     document.getElementById("nbreLignes").innerHTML = longueur;
     console.log(document.getElementById("nb-article"));
@@ -131,16 +138,22 @@ function supprimer(produit) {
     let longueur = monPanier.liste.length;
     for (let i = 0; i < longueur; i++) {
         let ligne = monPanier.liste[i];
+
         let ligneTableau = tableau.insertRow(-1);
         let colonne1 = ligneTableau.insertCell(0);
+
         colonne1.innerHTML += ligne.getproduit();
         let colonne2 = ligneTableau.insertCell(1);
+
         colonne2.innerHTML += ligne.quantiteArticle;
         let colonne3 = ligneTableau.insertCell(2);
+
         colonne3.innerHTML += ligne.priceArticle;
         let colonne4 = ligneTableau.insertCell(3);
+
         colonne4.innerHTML += ligne.getpriceLigne();
         let colonne5 = ligneTableau.insertCell(4);
+        
         colonne5.innerHTML += "<button class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
     }
     

@@ -75,4 +75,39 @@ function displayPanier(monPanier) {
 
 
 
+/*------------------formulaire d'envoie--------------------*/
+
+
+const lastName = document.getElementById("last_name");
+const firstName = document.getElementById("name");
+const mail = document.getElementById("mail");
+const ville = document.getElementById("ville");
+const adresse = document.getElementById("adresse");
+const orderForm = document.getElementById("orderForm");
+
+// créer un regexp et écouter un événement changeant sur chaque entrée
+
+let regexGlobal = /^[a-zA-Z]+$/u;
+let regexAdresse = /^[0-9]{1,5}( [-a-zA-Zàâäéèêëïîôöùûüç ]+)+$/;
+let regexMail = new RegExp(
+    "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$",
+	"g"
+);
+
+// événement d’écoute sur le changement
+
+orderForm.last_name.addEventListener("change", e =>
+    testField(
+        regexGlobal,
+        e.target.value,
+        lastName,
+        "lastName",
+        "erreur,il ne doit pas avoir de numéro dans votre nom"
+    )
+);
+
+
+
+
+
 
