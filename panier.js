@@ -69,19 +69,21 @@ function displayPanier(monPanier) {
     </tr>
 
 `
-    //element.insertAdjacentHTML('afterend', vueArticle);
+    element.insertAdjacentHTML('afterend', vueArticle);
 
 }
 
 // Formulaire de Commande
 
 const afficherFormulaireHtml = () => {
+
     // Sléction de l'élément du DOM pour la position du formulaire
+
     const structureFormulaire = document.querySelector("#formulaire");
     const formulaireHtml = `
             <div id="formulaire-commande">
                 <h2>Valider la commande en remplissant le formulaire</h2>
-                <form method="post" action= "http://localhost:3000/api/cameras"  name="validation" >
+                <form method="post" action= "http://localhost:3000/api/teddies"  name="validation" >
                     <label for="nom">Nom :</label>
                     <input type="text" id ="lastName"  name="lastName" >
             
@@ -102,7 +104,8 @@ const afficherFormulaireHtml = () => {
                     <button type="submit" id="envoyerCommande" class="btn-form" class="envoyer-commande">Valider votre commande</button>
                 </form>
             </div>    
-        `;
+        `
+        ;
     structureFormulaire.insertAdjacentHTML("afterend", formulaireHtml);
 };
 
