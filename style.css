@@ -149,26 +149,40 @@ th {
 
 /*--------------------formulaire---------------------*/
 
-.container-form {
-    text-align: center;
-}
-
-.form-titre {
-    padding-top: 2rem;
-}
-
-.form-group {
+#formulaire-commande {
     display: flex;
     flex-direction: column;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: 1.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
-#btn-submit {
-    margin-top: 2rem;
-
+#formulaire-commande h2{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 10;
 }
+
+/*----------------formulaire du panier---------------*/
+
+form{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.btn-form {
+    border: 0.2rem rgb(199, 131, 92) solid;
+    border-radius: 0.7rem;
+    max-width: 20rem;
+    margin-top: 1rem;
+}
+
+#lastName, #firstName, #email, #adress, #city {
+    margin-bottom: 1rem;
+}
+
 
 
 

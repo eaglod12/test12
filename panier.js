@@ -73,79 +73,42 @@ function displayPanier(monPanier) {
 
 }
 
+    // Formulaire de Commande
 
-/*------------------formulaire d'envoie--------------------*/
+    const afficherFormulaireHtml = () => {
+        // Sléction de l'élément du DOM pour la position du formulaire
+        const structureFormulaire = document.querySelector("#formulaire");
+        const formulaireHtml = `
+            <div id="formulaire-commande">
+                <h2>Valider la commande en remplissant le formulaire</h2>
+                <form method="post" action= "http://localhost:3000/api/cameras"  name="validation" >
+                    <label for="nom">Nom :</label>
+                    <input type="text" id ="lastName"  name="lastName" >
+            
+                    <label for="prénom">Prénom :</label>
+                    <input type="text" id ="firstName" name="firstName" >
+            
+                    <label for="email">E-mail :</label>
+                    <input type="text" id="email" name="email" >
 
+                    <label for="adresse">Adresse :</label>
+                    <input id ="adress" name="adress" maxlength = 50 ></input>
 
-const lastName = document.getElementById("last_name");
-const firstName = document.getElementById("first_name");
-const mail = document.getElementById("mail");
-const ville = document.getElementById("ville");
-const adresse = document.getElementById("adresse");
-const orderForm = document.getElementById("orderForm");
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="city" name="city" >
 
-// créer un regexp et écouter un événement changeant sur chaque entrée
+                    <p style="color:red;" id="erreur"></p>
+            
+                    <button type="submit" id="envoyerCommande" class="btn-form" class="envoyer-commande">Valider votre commande</button>
+                </form>
+            </div>    
+        `;
+        structureFormulaire.insertAdjacentHTML("afterend", formulaireHtml);
+    };
 
-let regexGlobal = /^[a-zA-Z]+$/u;
-let regexAdresse = /^[0-9]{1,5}( [-a-zA-Zàâäéèêëïîôöùûüç ]+)+$/;
-let regexMail = new RegExp(
-    "^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$",
-    "g"
-);
+    //appel function formolaire
 
-// événement d’écoute sur le changement
-
-orderForm.last_name.addEventListener("change", e =>
-    testField(
-        regexGlobal,
-        e.target.value,
-        lastName,
-        "lastName",
-        "erreur,il ne doit pas avoir de numéro dans votre nom"
-    )
-);
-
-orderForm.first_name.addEventListener("change", e =>
-    testField(
-        regexGlobal,
-        e.target.value,
-        firstName,
-        "lastName",
-        "erreur,il ne doit pas avoir de numéro dans votre nom"
-    )
-);
-
-orderForm.mail.addEventListener("change", e =>
-    testField(
-        regexMail,
-        e.target.value,
-        mail,
-        "mail",
-        "Désolé, votre adresse courriel n’est pas correcte, elle devrait contenir @"
-    )
-);
-
-orderForm.ville.addEventListener("change", e =>
-    testField(
-        regexGlobal,
-        e.target.value,
-        ville,
-        "ville",
-        "Désolé, vous ne devriez pas avoir de numéro dans votre nom de ville"
-    )
-);
-
-orderForm.adresse.addEventListener("adresse", e =>
-    testField(
-        regexAdresse,
-        e.target.value,
-        adresse,
-        "adresse",
-        "Désolé, mauvaise saisie de votre adresse, vous devez suivre l’exemple"
-    )
-);
-
-//création de variables pour tester les valeurs des entrées
+    afficherFormulaireHtml();
 
 
 
