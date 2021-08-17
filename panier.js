@@ -120,7 +120,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
     const validationFormulaire = true;
     let erreur;
     const inputs = document.getElementsByTagName("input");
-    
+
 
     // Boucle pour remplir tous les champs du formulaire
     for (let n = 0; n < inputs.length; n++) {
@@ -135,7 +135,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
         document.querySelector("#erreur").innerHTML = erreur;
     };
 
-    // Gestion des RegEx selon les différentes values du formulaire: Ex: pas de chiffres dans la ville
+    // Gestion des Regex selon les différentes valeurs du formulaire
     lastName = validation.lastName.value;
     regExpLastName = /^[a-zA-Z\s]{3,10}$/;
     if (regExpLastName.test(lastName) == false) {
@@ -143,7 +143,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
         return false;
     }
 
-    // RegEx pour le champ prenom
+    // Regex pour le champ prénom
     firstName = validation.firstName.value;
     regExFirstName = /^[a-zA-Z\s]{3,10}$/;
     if (regExFirstName.test(firstName) == false) {
@@ -151,7 +151,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
         return false;
     }
 
-    // RegEx pour le champ email
+    // Regex pour le champ email
     email = validation.email.value;
     regExMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (regExMail.test(email) == false) {
@@ -159,7 +159,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
         return false;
     }
 
-    // RegEx du champ adresse
+    // Regex du champ adresse
     adress = validation.adress.value;
     regExAdress = /^[a-zA-Z0-9\s]{10,25}$/;
     if (regExAdress.test(adress) == false) {
@@ -167,7 +167,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
         return false;
     }
 
-    // RegEx du champ ville
+    // Regex pour le champ ville
     city = validation.city.value;
     regExCity = /^[a-zA-Z\s]{5,15}$/;
     if (regExCity.test(city) == false) {
@@ -200,7 +200,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
     };
 
 
-    /* Requête POST pour envoyer les produits + contact vers le serveur */
+    /* Requête POST pour envoyer les produits et contact vers le serveur */
 
     fetch("http://localhost:3000/api/cameras/order", {
         method: "POST",
