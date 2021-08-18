@@ -71,7 +71,9 @@ function displayPanier(monPanier) {
 `
     element.insertAdjacentHTML('afterend', vueArticle);
 
-}
+};
+
+
 
 // Formulaire de Commande
 
@@ -105,9 +107,10 @@ const afficherFormulaireHtml = () => {
                 </form>
             </div>    
         `
-        ;
-    structureFormulaire.insertAdjacentHTML("afterend", formulaireHtml);
+            
+        structureFormulaire.insertAdjacentHTML("afterend", formulaireHtml);
 };
+
 
 //appel function formulaire
 
@@ -205,7 +208,7 @@ btnValidationFormulaire.addEventListener("click", (e) => {
 
     /* Requête POST pour envoyer les produits et contact vers le serveur */
 
-    fetch("http://localhost:3000/api/cameras/order", {
+    fetch("http://localhost:3000/api/teddies/order", {
         method: "POST",
         headers: {
             "Content-type": "application/json",

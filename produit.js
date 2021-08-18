@@ -68,7 +68,7 @@ function $_GET(param) {
     return lets;
 }
 
-    /*-----------------function pour ajouter au tableau------------------*/
+/*-----------------function pour ajouter au tableau------------------*/
 
 
 function ajouter() {
@@ -77,7 +77,6 @@ function ajouter() {
     let quantite = parseInt(document.getElementById("quantite").value);
     let price = parseInt(document.getElementById("price").innerHTML); console.log(document.getElementById("price").innerHTML);
     let monPanier = new Panier();
-    console.log(quantite);
     monPanier.ajouterArticle(produit, quantite, price);
     let tableau = document.getElementById("tableau");
     let longueurTab = parseInt(document.getElementById("quantite").value);
@@ -107,22 +106,24 @@ function ajouter() {
         let colonne5 = ligneTableau.insertCell(4);
 
         colonne5.innerHTML += "<button class=\"btn-retirer\" class=\"btn btn-primary\" type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
-    }   console.log(document.getElementById("priceTotal"));
+    } console.log(document.getElementById("priceTotal"));
 
     document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();
+
+    if (isNaN(longueur) || longueur == "NaN" || longueur == "") {
+        longueur = 0;
+    }
+
     document.getElementById("nbreLignes").innerHTML = longueur;
-    console.log(document.getElementById("nb-article"));
+    console.log(longueur);
     document.getElementById("nb-article").innerHTML = quantite;
 
     localStorage.setItem("monpanier", JSON.stringify(monPanier));
     console.log(localStorage.getItem('monpanier'));
-    /*let produitEnregistreDansLocalStorage = JSON.parse(localStorage.getItem("teddy"));
-    produitEnregistreDansLocalStorage.push(monPanier);*/
 }
 
 
-
-    /*----------function pour suprimer les lignes du tableau de commande---------*/
+/*----------function pour suprimer les lignes du tableau de commande---------*/
 
 
 function supprimer(produit) {
@@ -155,23 +156,24 @@ function supprimer(produit) {
         colonne4.innerHTML += ligne.getpriceLigne();
         let colonne5 = ligneTableau.insertCell(4);
 
-        colonne5.innerHTML += "<button type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span class=\"glyphicon glyphicon-remove\"></span> Retirer</button>";
+        colonne5.innerHTML += "<button type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span></span> Retirer</button>";
     }
-    
 
-    //erreur NaN----------------------------
-    if (isNaN(monPanier.getpricePanier())) {
-        monPanier.getpricePanier() = 0;
-      }
+    if (isNaN(longueur) || longueur == "NaN" || longueur == "") {
+        longueur = 0;
+    }
+
+    console.log(longueur);
 
     console.log(monPanier.getpricePanier());
 
     document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();
-    document.getElementById("nbreLignes").innerHTML = longueur;
+    document.getElementById("nbreLignes").innerHTML = longueur.parseInt();
 
-    console.log(document.getElementById("nb-article"));
-    document.getElementById("nb-article").innerHTML = parseInt(document.getElementById("priceTotal").innerHTML /(document.getElementById("price").innerHTML * document.getElementById("quantite").innerHTML));
+    console.log(parseInt(document.getElementById("priceTotal").innerHTML / (document.getElementById("price").innerHTML * document.getElementById("quantite").innerHTML)));
+    document.getElementById("nb-article").innerHTML = parseInt(document.getElementById("priceTotal").innerHTML / (document.getElementById("price").innerHTML * document.getElementById("quantite").innerHTML));
 }
+
 
 
 

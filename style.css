@@ -176,7 +176,6 @@ form{
     border: 0.2rem rgb(199, 131, 92) solid;
     border-radius: 0.7rem;
     max-width: 20rem;
-    margin-top: 1rem;
 }
 
 #lastName, #firstName, #email, #adress, #city {
