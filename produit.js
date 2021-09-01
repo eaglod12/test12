@@ -115,8 +115,10 @@ function ajouter() {
     }
 
     document.getElementById("nbreLignes").innerHTML = longueur;
-    console.log(longueur);
+    console.log('test'+ quantite);
     document.getElementById("nb-article").innerHTML = quantite;
+    
+    console.log('testquantite:'+document.getElementById("quantite").value );
 
     localStorage.setItem("monpanier", JSON.stringify(monPanier));
     console.log(localStorage.getItem('monpanier'));
@@ -126,10 +128,11 @@ function ajouter() {
 /*----------function pour suprimer les lignes du tableau de commande---------*/
 
 
-function supprimer(produit) {
+function supprimer(produit) {console.log(produit);
     let monPanier = new Panier();
     let tableau = document.getElementById("tableau");
     let longueurTab = parseInt(document.getElementById("nbreLignes").innerHTML);
+
     if (longueurTab > 0) {
         for (let i = longueurTab; i > 0; i--) {
             monPanier.ajouterArticle(parseInt(tableau.rows[i].cells[0].innerHTML), parseInt(tableau.rows[i].cells[1].innerHTML), parseInt(tableau.rows[i].cells[2].innerHTML));
@@ -137,11 +140,13 @@ function supprimer(produit) {
         }
     }
     monPanier.supprimerArticle(produit);
+    
     let longueur = monPanier.liste.length;
-    for (let i = 0; i < longueur; i++) {
+    console.log('longueur'+longueur);
+    /*for (let i = 0; i < longueur; i++) {
         let ligne = monPanier.liste[i];
 
-        let ligneTableau = tableau.insertRow(-1);
+        let ligneTableau = tableau.insertRow(1);
         let colonne1 = ligneTableau.insertCell(0);
 
         colonne1.innerHTML += ligne.getproduit();
@@ -156,22 +161,25 @@ function supprimer(produit) {
         colonne4.innerHTML += ligne.getpriceLigne();
         let colonne5 = ligneTableau.insertCell(4);
 
-        colonne5.innerHTML += "<button type=\"submit\" onclick=\"supprimer(this.parentNode.parentNode.cells[0].innerHTML)\"><span></span> Retirer</button>";
-    }
+        colonne5.innerHTML += "<button type=\"submit\" onclick=\"supprimer(this.parentNode.innerHTML(''))\"><span></span> Retirer</button>";
+    }*/
 
     if (isNaN(longueur) || longueur == "NaN" || longueur == "") {
         longueur = 0;
     }
 
-    console.log(longueur);
+    console.log('longueur:'+longueur);
 
-    console.log(monPanier.getpricePanier());
-
-    document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();
-    document.getElementById("nbreLignes").innerHTML = longueur.parseInt();
+    console.log('price:'+monPanier.getpricePanier());
+    
+    document.getElementById("quantite").value = 0;
+    document.getElementById("priceTotal").innerHTML = '';
+    document.getElementById("nb-article").innerHTML = '';
+    /*document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();*/
+    document.getElementById("nbreLignes").innerHTML = 0;
 
     console.log(parseInt(document.getElementById("priceTotal").innerHTML / (document.getElementById("price").innerHTML * document.getElementById("quantite").innerHTML)));
-    document.getElementById("nb-article").innerHTML = parseInt(document.getElementById("priceTotal").innerHTML / (document.getElementById("price").innerHTML * document.getElementById("quantite").innerHTML));
+    //document.getElementById("nb-article").innerHTML = longueur;
 }
 
 

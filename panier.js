@@ -49,9 +49,15 @@ function LignePanier(produit, quantite, price) {
 
 
 let panier = JSON.parse(localStorage.getItem('monpanier'));
+let listePanier = panier['liste'][0];
 
-console.log(panier['liste']);
-
+let code = listePanier.produitArticle;
+let price = listePanier.priceArticle;
+let quantity = listePanier.quantiteArticle;
+console.log(panier);
+console.log(code);
+console.log(price);
+console.log(quantity);
 
 /*------------------injection du html-----------------*/
 
