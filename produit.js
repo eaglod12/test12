@@ -168,9 +168,9 @@ function supprimer(produit) {console.log(produit);
         longueur = 0;
     }
 
-    console.log('longueur:'+longueur);
+    //console.log('longueur:'+longueur);
 
-    console.log('price:'+monPanier.getpricePanier());
+    //console.log('price:'+monPanier.getpricePanier());
     
     document.getElementById("quantite").value = 0;
     document.getElementById("priceTotal").innerHTML = '';
@@ -178,7 +178,7 @@ function supprimer(produit) {console.log(produit);
     /*document.getElementById("priceTotal").innerHTML = monPanier.getpricePanier();*/
     document.getElementById("nbreLignes").innerHTML = 0;
 
-    console.log(parseInt(document.getElementById("priceTotal").innerHTML / (document.getElementById("price").innerHTML * document.getElementById("quantite").innerHTML)));
+    //console.log(parseInt(document.getElementById("priceTotal").innerHTML / (document.getElementById("price").innerHTML * document.getElementById("quantite").innerHTML)));
     //document.getElementById("nb-article").innerHTML = longueur;
 }
 
